@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Source+Serif+Pro:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+
+/*el borde y el padding 
+no se sumen al width de un elemento*/
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 110%;
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+}
+
+strong,
+a {
+    font-weight: 400;
+}
+
+section div {
+    display: flex;
+    width: 50%;
+}
+
+
+/*selector descendente
+padre hijo { propiedad:valor;}
+*/
+
+a {
+    font-variant: small-caps;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 0.8em;
+}
+
+a:hover {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+}
+
+div a:last-child {
+    margin-left: 0.2em;
+}
+
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    /*  font-size:120px;*/
+    font-size: 3em;
+    margin: 0;
+}
+
+main {
+    padding: 0.5em;
+    background-color: #ffffff;
+    width: 90%;
+    /*en relación al contenedor padre*/
+    height: 90vh;
+    /*viewport height*/
+    margin: 5vh auto;
+    /*shorthand*/
+    display: flex;
+    /*encolumno los elementos anidados en el main*/
+    justify-content: center;
+    /*logramos con esto que los elementos encolumnados se centren*/
+    align-items: center;
+    /*logramos que los elementos se alinean hacia el centro verticalmente*/
+}
+
+section {
+    width: 40%;
+    font-size: 1.4em;
+}
+
+section p:last-child {
+    font-size: 0.6em;
+    margin-bottom: 0;
+}
+
+section p:nth-child(2) {
+    margin-top: 0;
+}
+
+section:last-child {
+    margin-left: 0.5em;
+}
+
+
+/*que con esta pseudo clase afecto a un elemento por ser el último hijo*/
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media(max-width:768px) {
+    body {
+        font-size: 80%;
+    }
+    main {
+        flex-direction: column;
+        margin: 1vh auto;
+        height: 98vh;
+    }
+    section {
+        width: 100%;
+    }
+    section p:last-child {
+        font-size: 1em;
+    }
+    h1,
+    section p:last-child {
+        text-align: center;
+    }
+    section div {
+        margin: 0 auto;
+    }
+}
